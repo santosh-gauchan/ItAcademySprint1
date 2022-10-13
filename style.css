@@ -6,9 +6,8 @@
 
 /* Pantalla movil */
 header {
-    width: 100%;
     background-color: black;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
 }
 div.menu {
@@ -18,14 +17,14 @@ div.menu {
 }
 .menuItem1, .menuItem2, .menuItem3 {
     padding: 10px;
-    
+    margin: 10px;
     background-color: rgb(230, 118, 118);
     
 }
  
 div.title {
     padding: 10px;
-    margin-bottom: 20px;
+    
     background-color: rgb(240, 136, 39);
 }
 div.title div {
@@ -35,12 +34,13 @@ div.title div {
 }
 main {
     background-color: black;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
 }
 div.container-content {
     background-color: rgb(121, 118, 118); 
     padding: 10px;
+    margin-bottom: 10px;
 }
 .container-content div {
     padding: 10px;
@@ -50,7 +50,7 @@ div.container-content {
 }
 div.side-bar {
     background-color: rgb(235, 80, 80);
-    margin-left: 10px;
+    padding: 10px;
 }
 .side-bar div {
     padding: 10px;
@@ -64,12 +64,55 @@ footer {
 footer div {
     background-color: rgb(233, 220, 36);
     padding: 10px;
+    margin: 10px;
 }
 
 
 
 /* Pantalla Tablet */
 
-
-
+@media screen and (min-width: 480px) {
     
+    div.menu {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .menuItem1, .menuItem3 {
+       width: 20%;        
+    }
+    .menuItem2 {
+        width: 60%;
+    }
+    div.container-content {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+        
+    }
+    .container-content div {
+        flex: 1 1 180px;
+    }
+    .side-bar {
+        margin: 0 0 10px;
+    }
+}
+
+/* Pantalla ordenador */
+
+@media screen and (min-width: 992px){
+    main {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    div.container-content {
+        flex: 1 1 600px;
+        margin-right: 20px;
+        margin-bottom: initial;
+    }
+    div.side-bar {
+        flex: 1 1 300px;
+    }
+    
+}    
